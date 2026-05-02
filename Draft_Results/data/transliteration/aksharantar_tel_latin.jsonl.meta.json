@@ -1,0 +1,21 @@
+{
+  "name": "ai4bharat/Aksharantar[tel-en]",
+  "url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+  "license": "cc",
+  "version_date": "2023-08-31",
+  "row_count": 2000,
+  "build_note": "Subset materialized for Loop 1 cross-scale smoke/full premise-gate autoresearch.",
+  "source_report": {
+    "language_code": "tel",
+    "source_language": "Telugu",
+    "target_script": "Telugu",
+    "zip_path": ".cache/aksharantar/tel.zip",
+    "counts": {
+      "raw_rows": 2447503,
+      "seen": 2447503,
+      "drop_short_source": 299,
+      "drop_ambiguous_source": 120807,
+      "usable_unique_rows": 2177040
+    }
+  }
+}

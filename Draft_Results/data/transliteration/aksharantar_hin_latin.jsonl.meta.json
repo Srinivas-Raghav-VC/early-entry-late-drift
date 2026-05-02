@@ -1,0 +1,21 @@
+{
+  "name": "ai4bharat/Aksharantar[hin-en]",
+  "url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+  "license": "cc",
+  "version_date": "2023-08-31",
+  "row_count": 2000,
+  "build_note": "Subset materialized for Loop 1 cross-scale smoke/full premise-gate autoresearch.",
+  "source_report": {
+    "language_code": "hin",
+    "source_language": "Hindi",
+    "target_script": "Devanagari",
+    "zip_path": ".cache/aksharantar/hin.zip",
+    "counts": {
+      "raw_rows": 1315624,
+      "seen": 1315624,
+      "drop_short_source": 373,
+      "drop_ambiguous_source": 143908,
+      "usable_unique_rows": 936116
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "v1",
+  "recommended_workshop_pairs": [
+    "aksharantar_hin_latin",
+    "aksharantar_mar_latin",
+    "aksharantar_ben_latin",
+    "aksharantar_tam_latin",
+    "aksharantar_tel_latin"
+  ],
+  "pairs": {
+    "aksharantar_hin_latin": {
+      "family": "indic_latinized",
+      "source_language": "Hindi",
+      "source_script": "Latin",
+      "target_script": "Devanagari",
+      "builder": {
+        "hf_dataset": "ai4bharat/Aksharantar",
+        "hf_config": "hin",
+        "hf_split": "train",
+        "id_col": "unique_identifier",
+        "source_col": "english word",
+        "target_col": "native word",
+        "meta_name": "ai4bharat/Aksharantar[hin-en]",
+        "meta_url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+        "meta_license": "cc",
+        "meta_version_date": "2023-08-31",
+        "min_rows": 500
+      }
+    },
+    "aksharantar_mar_latin": {
+      "family": "indic_latinized",
+      "source_language": "Marathi",
+      "source_script": "Latin",
+      "target_script": "Devanagari",
+      "builder": {
+        "hf_dataset": "ai4bharat/Aksharantar",
+        "hf_config": "mar",
+        "hf_split": "train",
+        "id_col": "unique_identifier",
+        "source_col": "english word",
+        "target_col": "native word",
+        "meta_name": "ai4bharat/Aksharantar[mar-en]",
+        "meta_url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+        "meta_license": "cc",
+        "meta_version_date": "2023-08-31",
+        "min_rows": 500
+      }
+    },
+    "aksharantar_ben_latin": {
+      "family": "indic_latinized",
+      "source_language": "Bengali",
+      "source_script": "Latin",
+      "target_script": "Bengali",
+      "builder": {
+        "hf_dataset": "ai4bharat/Aksharantar",
+        "hf_config": "ben",
+        "hf_split": "train",
+        "id_col": "unique_identifier",
+        "source_col": "english word",
+        "target_col": "native word",
+        "meta_name": "ai4bharat/Aksharantar[ben-en]",
+        "meta_url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+        "meta_license": "cc",
+        "meta_version_date": "2023-08-31",
+        "min_rows": 500
+      }
+    },
+    "aksharantar_tam_latin": {
+      "family": "indic_latinized",
+      "source_language": "Tamil",
+      "source_script": "Latin",
+      "target_script": "Tamil",
+      "builder": {
+        "hf_dataset": "ai4bharat/Aksharantar",
+        "hf_config": "tam",
+        "hf_split": "train",
+        "id_col": "unique_identifier",
+        "source_col": "english word",
+        "target_col": "native word",
+        "meta_name": "ai4bharat/Aksharantar[tam-en]",
+        "meta_url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+        "meta_license": "cc",
+        "meta_version_date": "2023-08-31",
+        "min_rows": 500
+      }
+    },
+    "aksharantar_tel_latin": {
+      "family": "indic_latinized",
+      "source_language": "Telugu",
+      "source_script": "Latin",
+      "target_script": "Telugu",
+      "builder": {
+        "hf_dataset": "ai4bharat/Aksharantar",
+        "hf_config": "tel",
+        "hf_split": "train",
+        "id_col": "unique_identifier",
+        "source_col": "english word",
+        "target_col": "native word",
+        "meta_name": "ai4bharat/Aksharantar[tel-en]",
+        "meta_url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+        "meta_license": "cc",
+        "meta_version_date": "2023-08-31",
+        "min_rows": 500
+      }
+    }
+  }
+}

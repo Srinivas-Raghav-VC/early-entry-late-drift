@@ -1,0 +1,340 @@
+{
+  "pair": "aksharantar_hin_latin",
+  "source_language": "Hindi",
+  "input_script_name": "Latin",
+  "output_script_name": "Devanagari",
+  "icl_examples": [
+    {
+      "english": "hin96494",
+      "hindi": "गाज़",
+      "ood": "gauze"
+    },
+    {
+      "english": "hin976582",
+      "hindi": "कुडमकुलन",
+      "ood": "kudamkulan"
+    },
+    {
+      "english": "hin73172",
+      "hindi": "चौकोर",
+      "ood": "chaukora"
+    },
+    {
+      "english": "hin884734",
+      "hindi": "ओशोवादी",
+      "ood": "oshovadi"
+    },
+    {
+      "english": "hin1912",
+      "hindi": "प्रभुता",
+      "ood": "prabhuta"
+    },
+    {
+      "english": "hin370937",
+      "hindi": "स्वयंसेवियो",
+      "ood": "swayamseviyo"
+    },
+    {
+      "english": "hin423142",
+      "hindi": "कैंपेनस",
+      "ood": "campanus"
+    },
+    {
+      "english": "hin1035230",
+      "hindi": "लटवाने",
+      "ood": "latwaane"
+    },
+    {
+      "english": "hin850907",
+      "hindi": "वानरभालू",
+      "ood": "vanarbhalu"
+    },
+    {
+      "english": "hin361290",
+      "hindi": "निर्मिल",
+      "ood": "nirmil"
+    },
+    {
+      "english": "hin257512",
+      "hindi": "विलियमसन",
+      "ood": "willaimson"
+    },
+    {
+      "english": "hin211554",
+      "hindi": "गिंसबर्ग",
+      "ood": "ginsburg"
+    },
+    {
+      "english": "hin840702",
+      "hindi": "पुतण्याच्या",
+      "ood": "putanyachya"
+    },
+    {
+      "english": "hin247957",
+      "hindi": "सैस",
+      "ood": "sas"
+    },
+    {
+      "english": "hin2505",
+      "hindi": "बांया",
+      "ood": "baanyaa"
+    },
+    {
+      "english": "hin1034756",
+      "hindi": "होरिल्का",
+      "ood": "horilka"
+    }
+  ],
+  "eval_rows": [
+    {
+      "english": "hin1187298",
+      "hindi": "जागृतीचे",
+      "ood": "jagritiche"
+    },
+    {
+      "english": "hin734396",
+      "hindi": "क्रोमपेट",
+      "ood": "crompet"
+    },
+    {
+      "english": "hin185198",
+      "hindi": "पीलमेडु",
+      "ood": "peelamedu"
+    },
+    {
+      "english": "hin765630",
+      "hindi": "रेहनरहित",
+      "ood": "rehanrahit"
+    },
+    {
+      "english": "hin762666",
+      "hindi": "सबीले",
+      "ood": "sabile"
+    },
+    {
+      "english": "hin142551",
+      "hindi": "दूरगामी",
+      "ood": "doorgami"
+    },
+    {
+      "english": "hin1130020",
+      "hindi": "अंगवाकू",
+      "ood": "angwaku"
+    },
+    {
+      "english": "hin1039795",
+      "hindi": "उमेदवारीची",
+      "ood": "umedwarichi"
+    },
+    {
+      "english": "hin1076573",
+      "hindi": "हर्बस्ट",
+      "ood": "herbust"
+    },
+    {
+      "english": "hin1251358",
+      "hindi": "स्पेसिपिकेशन",
+      "ood": "specipication"
+    },
+    {
+      "english": "hin1178886",
+      "hindi": "कलाशंकरनगरवर",
+      "ood": "kalashankarnagarvar"
+    },
+    {
+      "english": "hin914148",
+      "hindi": "नागलैण्ड",
+      "ood": "nagland"
+    },
+    {
+      "english": "hin1256746",
+      "hindi": "सुचविला",
+      "ood": "suchavila"
+    },
+    {
+      "english": "hin312597",
+      "hindi": "काखानाडा",
+      "ood": "kakhanada"
+    },
+    {
+      "english": "hin415000",
+      "hindi": "सिगर्डसन",
+      "ood": "sigardson"
+    },
+    {
+      "english": "hin1048036",
+      "hindi": "तुलनायोग्य",
+      "ood": "tulnayogya"
+    },
+    {
+      "english": "hin1249822",
+      "hindi": "विरुद्धमे",
+      "ood": "viruddhame"
+    },
+    {
+      "english": "hin256301",
+      "hindi": "ड्रेसेज़",
+      "ood": "dresses"
+    },
+    {
+      "english": "hin1202683",
+      "hindi": "वार्डाच्या",
+      "ood": "wardachya"
+    },
+    {
+      "english": "hin953246",
+      "hindi": "रणयज्ञ",
+      "ood": "ranyagya"
+    },
+    {
+      "english": "hin215670",
+      "hindi": "कोव्दा",
+      "ood": "kovda"
+    },
+    {
+      "english": "hin1296576",
+      "hindi": "बेनहर",
+      "ood": "benhar"
+    },
+    {
+      "english": "hin20413",
+      "hindi": "खिचड़ी",
+      "ood": "khichdi"
+    },
+    {
+      "english": "hin1043736",
+      "hindi": "डाइवेटिक",
+      "ood": "divetic"
+    },
+    {
+      "english": "hin686160",
+      "hindi": "नाहरघट्टा",
+      "ood": "naharghatta"
+    },
+    {
+      "english": "hin1292739",
+      "hindi": "मजाहिरों",
+      "ood": "majaahiron"
+    },
+    {
+      "english": "hin622238",
+      "hindi": "जीटीएलआई",
+      "ood": "gtli"
+    },
+    {
+      "english": "hin696229",
+      "hindi": "शिरोटे",
+      "ood": "shirote"
+    },
+    {
+      "english": "hin849045",
+      "hindi": "शकिरा",
+      "ood": "shakira"
+    },
+    {
+      "english": "hin625616",
+      "hindi": "संझौला",
+      "ood": "sanjhaula"
+    },
+    {
+      "english": "hin658408",
+      "hindi": "सर्वनिम्न",
+      "ood": "sarvanimna"
+    },
+    {
+      "english": "hin177858",
+      "hindi": "मैदाम",
+      "ood": "maidam"
+    },
+    {
+      "english": "hin592691",
+      "hindi": "इकोर्टरी",
+      "ood": "ecortary"
+    },
+    {
+      "english": "hin1279353",
+      "hindi": "फलानों",
+      "ood": "falaanon"
+    },
+    {
+      "english": "hin1244673",
+      "hindi": "मखता",
+      "ood": "makhta"
+    },
+    {
+      "english": "hin858776",
+      "hindi": "शातिला",
+      "ood": "shatila"
+    },
+    {
+      "english": "hin213778",
+      "hindi": "एल्फाइन",
+      "ood": "alpine"
+    },
+    {
+      "english": "hin1008472",
+      "hindi": "कुंबार",
+      "ood": "kumbar"
+    },
+    {
+      "english": "hin217965",
+      "hindi": "भदरक",
+      "ood": "bhadrak"
+    },
+    {
+      "english": "hin75450",
+      "hindi": "कलेवर",
+      "ood": "kalevar"
+    },
+    {
+      "english": "hin642838",
+      "hindi": "रसाचा",
+      "ood": "rasacha"
+    },
+    {
+      "english": "hin525493",
+      "hindi": "देवहंश",
+      "ood": "devhansh"
+    },
+    {
+      "english": "hin846918",
+      "hindi": "मेडतारोड",
+      "ood": "medtarod"
+    },
+    {
+      "english": "hin1240864",
+      "hindi": "निहितस्वार्थों",
+      "ood": "nihitaswarthon"
+    },
+    {
+      "english": "hin1156958",
+      "hindi": "ऑपरेटरच्या",
+      "ood": "operatorchya"
+    },
+    {
+      "english": "hin51228",
+      "hindi": "रामगुप्त",
+      "ood": "ramgoopta"
+    },
+    {
+      "english": "hin256380",
+      "hindi": "धोपड़े",
+      "ood": "dhopade"
+    },
+    {
+      "english": "hin125694",
+      "hindi": "आयनों",
+      "ood": "aaynon"
+    },
+    {
+      "english": "hin375060",
+      "hindi": "लोइन",
+      "ood": "loin"
+    },
+    {
+      "english": "hin1287606",
+      "hindi": "प्रतिघोष",
+      "ood": "pratighosh"
+    }
+  ]
+}

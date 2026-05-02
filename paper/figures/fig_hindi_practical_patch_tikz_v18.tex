@@ -1,0 +1,139 @@
+\begin{tikzpicture}[x=1cm,y=1cm, every node/.style={inner sep=0pt}]
+  \tikzset{cell/.style={draw=black!8, line width=0.28pt, rounded corners=2.2pt}, head/.style={font=\bfseries\small}, rowlab/.style={font=\bfseries\scriptsize, text=black!88}, colab/.style={font=\bfseries\scriptsize}, tinycap/.style={font=\scriptsize, text=black!63}, num/.style={font=\bfseries\scriptsize}}
+
+  \node[anchor=west, head] at (0.0,0.38) {A. Selection-split sweep};
+  \node[anchor=west, colab] at (0.00,-0.33) {$\alpha$};
+  \node[anchor=west, colab] at (1.55,-0.33) {$\Delta \mathcal{L}$};
+  \node[anchor=west, colab] at (3.00,-0.33) {$\Delta p_{\mathrm{target}}$};
+  \definecolor{hpA_gap_0}{RGB}{218,227,245}
+  \definecolor{hpA_prob_0}{RGB}{222,230,246}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-1.23) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-1.51) {0.25};
+  \path[fill=hpA_gap_0, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-1.23) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-1.51) {+1.03};
+  \path[fill=hpA_prob_0, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-1.23) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-1.51) {+0.05};
+  \definecolor{hpA_gap_1}{RGB}{191,210,242}
+  \definecolor{hpA_prob_1}{RGB}{195,212,242}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-1.91) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-2.19) {0.50};
+  \path[fill=hpA_gap_1, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-1.91) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-2.19) {+2.02};
+  \path[fill=hpA_prob_1, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-1.91) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-2.19) {+0.10};
+  \definecolor{hpA_gap_2}{RGB}{166,193,238}
+  \definecolor{hpA_prob_2}{RGB}{167,193,238}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-2.59) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-2.87) {0.75};
+  \path[fill=hpA_gap_2, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-2.59) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-2.87) {+2.94};
+  \path[fill=hpA_prob_2, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-2.59) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-2.87) {+0.15};
+  \definecolor{hpA_gap_3}{RGB}{144,178,235}
+  \definecolor{hpA_prob_3}{RGB}{143,178,235}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-3.27) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-3.55) {1.00};
+  \path[fill=hpA_gap_3, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-3.27) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-3.55) {+3.78};
+  \path[fill=hpA_prob_3, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-3.27) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-3.55) {+0.20};
+  \definecolor{hpA_gap_4}{RGB}{123,165,233}
+  \definecolor{hpA_prob_4}{RGB}{123,164,233}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-3.95) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-4.23) {1.25};
+  \path[fill=hpA_gap_4, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-3.95) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-4.23) {+4.53};
+  \path[fill=hpA_prob_4, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-3.95) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-4.23) {+0.24};
+  \definecolor{hpA_gap_5}{RGB}{106,153,230}
+  \definecolor{hpA_prob_5}{RGB}{106,153,230}
+  \path[fill=white, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (0.00,-4.63) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-4.91) {1.50};
+  \path[fill=hpA_gap_5, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (1.55,-4.63) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-4.91) {+5.19};
+  \path[fill=hpA_prob_5, draw=black!8, line width=0.28pt, rounded corners=2.2pt] (3.00,-4.63) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-4.91) {+0.27};
+  \definecolor{hpA_gap_6}{RGB}{77,134,226}
+  \definecolor{hpA_prob_6}{RGB}{79,135,227}
+  \path[fill=white, draw=appleOrange, line width=0.9pt, rounded corners=2.2pt] (0.00,-5.31) rectangle ++(1.05,-0.56);
+  \node[num] at (0.53,-5.59) {2.00};
+  \path[fill=hpA_gap_6, draw=appleOrange, line width=0.9pt, rounded corners=2.2pt] (1.55,-5.31) rectangle ++(1.25,-0.56);
+  \node[num] at (2.17,-5.59) {+6.23};
+  \path[fill=hpA_prob_6, draw=appleOrange, line width=0.9pt, rounded corners=2.2pt] (3.00,-5.31) rectangle ++(1.25,-0.56);
+  \node[num] at (3.62,-5.59) {+0.32};
+  \node[anchor=west, head] at (5.25,0.38) {B. Held-out deltas on 200 items};
+  \node[anchor=west, colab] at (5.25,-0.33) {intervention};
+  \node[anchor=west, colab] at (7.30,-0.33) {$\Delta$EM};
+  \node[anchor=west, colab] at (9.17,-0.33) {$\Delta$CER};
+  \node[anchor=west, colab] at (10.90,-0.33) {$\Delta E_{\mathrm{ak}}$};
+  \node[anchor=west, rowlab] at (5.25,-1.44) {Mean shift};
+  \definecolor{hpB_0_1}{RGB}{188,232,201}
+  \path[fill=hpB_0_1, cell] (7.30,-1.18) rectangle ++(1.48,-0.56);
+  \node[num] at (8.04,-1.46) {+0.01};
+  \definecolor{hpB_0_2}{RGB}{113,214,139}
+  \path[fill=hpB_0_2, cell] (9.17,-1.18) rectangle ++(1.48,-0.56);
+  \node[num] at (9.91,-1.46) {+0.12};
+  \definecolor{hpB_0_3}{RGB}{107,212,135}
+  \path[fill=hpB_0_3, cell] (11.04,-1.18) rectangle ++(1.48,-0.56);
+  \node[num] at (11.78,-1.46) {+0.25};
+  \node[anchor=west, rowlab] at (5.25,-2.16) {Sign flip};
+  \definecolor{hpB_1_1}{RGB}{233,180,180}
+  \path[fill=hpB_1_1, cell] (7.30,-1.90) rectangle ++(1.48,-0.56);
+  \node[num] at (8.04,-2.18) {-0.02};
+  \definecolor{hpB_1_2}{RGB}{224,134,131}
+  \path[fill=hpB_1_2, cell] (9.17,-1.90) rectangle ++(1.48,-0.56);
+  \node[num] at (9.91,-2.18) {-0.10};
+  \definecolor{hpB_1_3}{RGB}{224,131,128}
+  \path[fill=hpB_1_3, cell] (11.04,-1.90) rectangle ++(1.48,-0.56);
+  \node[num] at (11.78,-2.18) {-0.24};
+  \node[anchor=west, rowlab] at (5.25,-2.88) {Zero ablate};
+  \definecolor{hpB_2_1}{RGB}{246,246,249}
+  \path[fill=hpB_2_1, cell] (7.30,-2.62) rectangle ++(1.48,-0.56);
+  \node[num] at (8.04,-2.90) {+0.00};
+  \definecolor{hpB_2_2}{RGB}{234,243,239}
+  \path[fill=hpB_2_2, cell] (9.17,-2.62) rectangle ++(1.48,-0.56);
+  \node[num] at (9.91,-2.90) {+0.01};
+  \definecolor{hpB_2_3}{RGB}{238,244,242}
+  \path[fill=hpB_2_3, cell] (11.04,-2.62) rectangle ++(1.48,-0.56);
+  \node[num] at (11.78,-2.90) {+0.01};
+  \node[anchor=west, head] at (0.00,-6.15) {C. Signed steering vs. lesioning};
+  \node[anchor=west, colab] at (0.00,-6.86) {intervention};
+  \node[anchor=west, colab] at (4.15,-6.86) {$\Delta$ CER};
+  \node[anchor=west, colab] at (6.18,-6.86) {$\Delta$ EM};
+  \definecolor{hpC_cer_0}{RGB}{226,241,232}
+  \definecolor{hpC_em_0}{RGB}{227,241,233}
+  \node[anchor=west, rowlab] at (0.00,-7.97) {Zero 5486};
+  \path[fill=hpC_cer_0, cell] (4.15,-7.71) rectangle ++(1.48,-0.56);
+  \node[num] at (4.89,-7.99) {+0.02};
+  \path[fill=hpC_em_0, cell] (6.18,-7.71) rectangle ++(1.22,-0.56);
+  \node[num] at (6.79,-7.99) {+0.005};
+  \definecolor{hpC_cer_1}{RGB}{245,246,248}
+  \definecolor{hpC_em_1}{RGB}{227,241,233}
+  \node[anchor=west, rowlab] at (0.00,-8.67) {Zero 2299};
+  \path[fill=hpC_cer_1, cell] (4.15,-8.41) rectangle ++(1.48,-0.56);
+  \node[num] at (4.89,-8.69) {+0.00};
+  \path[fill=hpC_em_1, cell] (6.18,-8.41) rectangle ++(1.22,-0.56);
+  \node[num] at (6.79,-8.69) {+0.005};
+  \definecolor{hpC_cer_2}{RGB}{234,243,239}
+  \definecolor{hpC_em_2}{RGB}{246,246,249}
+  \node[anchor=west, rowlab] at (0.00,-9.37) {Zero both};
+  \path[fill=hpC_cer_2, cell] (4.15,-9.11) rectangle ++(1.48,-0.56);
+  \node[num] at (4.89,-9.39) {+0.01};
+  \path[fill=hpC_em_2, cell] (6.18,-9.11) rectangle ++(1.22,-0.56);
+  \node[num] at (6.79,-9.39) {+0.000};
+  \definecolor{hpC_cer_3}{RGB}{113,214,139}
+  \definecolor{hpC_em_3}{RGB}{188,232,201}
+  \node[anchor=west, rowlab] at (0.00,-10.07) {Mean shift};
+  \path[fill=hpC_cer_3, cell] (4.15,-9.81) rectangle ++(1.48,-0.56);
+  \node[num] at (4.89,-10.09) {+0.12};
+  \path[fill=hpC_em_3, cell] (6.18,-9.81) rectangle ++(1.22,-0.56);
+  \node[num] at (6.79,-10.09) {+0.015};
+  \definecolor{hpC_cer_4}{RGB}{224,134,131}
+  \definecolor{hpC_em_4}{RGB}{233,180,180}
+  \node[anchor=west, rowlab] at (0.00,-10.77) {Sign flip};
+  \path[fill=hpC_cer_4, cell] (4.15,-10.51) rectangle ++(1.48,-0.56);
+  \node[num] at (4.89,-10.79) {-0.10};
+  \path[fill=hpC_em_4, cell] (6.18,-10.51) rectangle ++(1.22,-0.56);
+  \node[num] at (6.79,-10.79) {-0.020};
+  \path[use as bounding box] (-0.15,0.62) rectangle (12.15,-10.05);
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+% Static overview generated during final review polish.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  every node/.style={align=center},
+  card/.style={rounded corners=2.4pt, line width=.35pt, minimum width=2.45cm, minimum height=.82cm, inner sep=2.3pt, font=\scriptsize},
+  head/.style={font=\scriptsize\bfseries, text=appleDark},
+  note/.style={font=\tiny, text=appleGray!95}
+]
+\node[head] at (1.28,3.10) {failure stage};
+\node[head] at (4.18,3.10) {tested handle};
+\node[head] at (7.08,3.10) {edit outcome};
+
+\node[card, draw=appleOrange!65, fill=appleLightOrange] at (1.28,2.15)
+  {\textbf{Hindi 1B}\\entry failure\\Latin pressure};
+\node[card, draw=appleOrange!65, fill=white] at (4.18,2.15)
+  {\textbf{compact MLP}\\L25 channels\\\texttt{[5486,2299]}};
+\node[card, draw=appleGreen!65, fill=appleLightGreen] at (7.08,2.15)
+  {\textbf{fixed edit helps}\\CER $0.827{\to}0.703$\\sign flip harms};
+
+\node[card, draw=appleBlue!60, fill=appleLightBlue] at (1.28,0.88)
+  {\textbf{Telugu 1B}\\entry often correct\\late drift};
+\node[card, draw=appleBlue!60, fill=white] at (4.18,0.88)
+  {\textbf{broader state}\\post-L25 residual\\oracle diagnostic};
+\node[card, draw=appleGray!70, fill=appleLightGray] at (7.08,0.88)
+  {\textbf{tested edits fail}\\tail CER no gain\\bounded negative};
+
+\draw[appleGray!45,line width=.35pt] (2.62,2.15) -- (2.84,2.15);
+\draw[appleGray!45,line width=.35pt] (5.52,2.15) -- (5.74,2.15);
+\draw[appleGray!45,line width=.35pt] (2.62,0.88) -- (2.84,0.88);
+\draw[appleGray!45,line width=.35pt] (5.52,0.88) -- (5.74,0.88);
+
+\node[note] at (4.18,0.06)
+  {Same task, different stage; intervention affordance changes.};
+\path[use as bounding box] (-0.05,-0.10) rectangle (8.40,3.34);
+\end{tikzpicture}

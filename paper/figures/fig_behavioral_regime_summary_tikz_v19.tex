@@ -1,0 +1,95 @@
+\begin{tikzpicture}[x=1cm,y=1cm, every node/.style={inner sep=0pt}]
+  \def\cellw{1.95}
+  \def\cellh{1.05}
+  \def\leftx{0}
+  \def\rightx{10.9}
+
+  \tikzset{
+    cell/.style={draw=black!8, line width=0.3pt, rounded corners=3pt},
+    head/.style={font=\bfseries\small},
+    collab/.style={font=\bfseries\scriptsize},
+    num/.style={font=\bfseries\small},
+    tinycap/.style={font=\scriptsize, text=black!65}
+  }
+
+  % enlarge the effective bounding box so the bottom labels are never clipped by the caption
+  \path[use as bounding box] (\leftx-0.6, -3.25) rectangle (\rightx+10.55, 0.82);
+
+  % panel titles
+  \node[anchor=west, head] at (\leftx, 0.55) {Exact-match gain};
+  \node[anchor=west, tinycap] at (\leftx, 0.18) {helpful $-$ zero-shot exact match};
+  \node[anchor=west, head] at (\rightx, 0.55) {CER improvement};
+  \node[anchor=west, tinycap] at (\rightx, 0.18) {zero-shot CER $-$ helpful CER};
+
+  % row labels
+  \node[anchor=east, head] at (\leftx-0.2, -0.95) {4B};
+  \node[anchor=east, head] at (\leftx-0.2, -2.18) {1B};
+  \node[anchor=east, head] at (\rightx-0.2, -0.95) {4B};
+  \node[anchor=east, head] at (\rightx-0.2, -2.18) {1B};
+
+  % column labels are drawn after the cells so they cannot be occluded by the heatmap blocks
+
+  % left panel, 4B
+  \path[fill=red!8!white, cell] (\leftx+0.00, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+0.975, -0.875) {$-0.01$};
+  \path[fill=blue!10!white, cell] (\leftx+2.05, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+3.025, -0.875) {$+0.03$};
+  \path[fill=cyan!28!white, cell] (\leftx+4.10, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+5.075, -0.875) {$+0.12$};
+  \path[fill=teal!38!white, cell] (\leftx+6.15, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+7.125, -0.875) {$+0.19$};
+  \path[fill=appleGreen!45!white, cell] (\leftx+8.20, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+9.175, -0.875) {$+0.27$};
+
+  % left panel, 1B
+  \path[fill=red!40!white, cell] (\leftx+0.00, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+0.975, -2.105) {$-0.03$};
+  \path[fill=black!3, cell] (\leftx+2.05, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+3.025, -2.105) {$+0.00$};
+  \path[fill=red!12!white, cell] (\leftx+4.10, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+5.075, -2.105) {$-0.01$};
+  \path[fill=black!3, cell] (\leftx+6.15, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+7.125, -2.105) {$+0.00$};
+  \path[fill=black!3, cell] (\leftx+8.20, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\leftx+9.175, -2.105) {$+0.00$};
+
+  % right panel, 4B
+  \path[fill=red!10!white, cell] (\rightx+0.00, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+0.975, -0.875) {$-0.02$};
+  \path[fill=blue!12!white, cell] (\rightx+2.05, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+3.025, -0.875) {$+0.16$};
+  \path[fill=cyan!18!white, cell] (\rightx+4.10, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+5.075, -0.875) {$+0.53$};
+  \path[fill=appleGreen!70!white, cell] (\rightx+6.15, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+7.125, -0.875) {$+2.27$};
+  \path[fill=appleGreen!60!white, cell] (\rightx+8.20, -0.35) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+9.175, -0.875) {$+2.14$};
+
+  % right panel, 1B
+  \path[fill=red!45!white, cell] (\rightx+0.00, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+0.975, -2.105) {$-0.95$};
+  \path[fill=black!3, cell] (\rightx+2.05, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+3.025, -2.105) {$+0.06$};
+  \path[fill=red!70!white, cell] (\rightx+4.10, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+5.075, -2.105) {$-1.22$};
+  \path[fill=red!14!white, cell] (\rightx+6.15, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+7.125, -2.105) {$-0.36$};
+  \path[fill=red!10!white, cell] (\rightx+8.20, -1.58) rectangle ++(\cellw,-\cellh);
+  \node[num] at (\rightx+9.175, -2.105) {$-0.20$};
+
+  % column labels
+  \node[anchor=north, collab] at (\leftx+0.95, -2.76) {Hindi};
+  \node[anchor=north, collab] at (\leftx+3.00, -2.76) {Marathi$^{\dagger}$};
+  \node[anchor=north, collab] at (\leftx+5.05, -2.76) {Bengali};
+  \node[anchor=north, collab] at (\leftx+7.10, -2.76) {Tamil};
+  \node[anchor=north, collab] at (\leftx+9.15, -2.76) {Telugu};
+
+  \node[anchor=north, collab] at (\rightx+0.95, -2.76) {Hindi};
+  \node[anchor=north, collab] at (\rightx+3.00, -2.76) {Marathi$^{\dagger}$};
+  \node[anchor=north, collab] at (\rightx+5.05, -2.76) {Bengali};
+  \node[anchor=north, collab] at (\rightx+7.10, -2.76) {Tamil};
+  \node[anchor=north, collab] at (\rightx+9.15, -2.76) {Telugu};
+
+  \node[anchor=north, tinycap] at ({0.5*(\leftx+\rightx+10.15)}, -3.02) {$^{\dagger}$ seed-42 diagnostic row};
+
+\end{tikzpicture}

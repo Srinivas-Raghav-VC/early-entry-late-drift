@@ -1,0 +1,182 @@
+{
+  "value_artifact": "research/results/autoresearch/hindi_channel_value_audit_v1/1b/aksharantar_hin_latin/nicl64/hindi_1b_channel_value_audit.json",
+  "geometry_artifact": "research/results/autoresearch/hindi_channel_readout_geometry_v1/1b/aksharantar_hin_latin/seed42/nicl64/hindi_1b_channel_readout_geometry_audit.json",
+  "interpretation_status": "supported but bounded",
+  "summary_rows": [
+    {
+      "channel": 5486,
+      "n_items": 30,
+      "zs_value": -7.384375,
+      "helpful_value": 3.756884765625,
+      "zs_minus_helpful": -11.141259765625,
+      "readout_grad_dot_column": -0.21206981390714646,
+      "readout_grad_column_cosine": -0.08425684466821717,
+      "first_order_predicted_effect": 2.3614109021553302,
+      "actual_singleton_patch_effect": 2.38125,
+      "predicted_actual_corr": 0.973041832765211,
+      "latin_collapse_actual_effect": 2.4833333333333334,
+      "corr_helpful_value_with_helpful_target_minus_latin": -0.21541236957344756,
+      "corr_helpful_value_with_latin_top1": 0.1598797513439923,
+      "subtype_rows": [
+        {
+          "subtype": "base_success",
+          "n_items": 14,
+          "mean_helpful_value": 3.4070521763392856,
+          "mean_helpful_minus_zs": 11.036516462053571
+        },
+        {
+          "subtype": "devanagari_wrong",
+          "n_items": 1,
+          "mean_helpful_value": 4.96875,
+          "mean_helpful_minus_zs": 14.59375
+        },
+        {
+          "subtype": "latin_collapse",
+          "n_items": 15,
+          "mean_helpful_value": 4.002604166666667,
+          "mean_helpful_minus_zs": 11.008854166666667
+        }
+      ],
+      "top_helpful_value_contexts": [
+        {
+          "word_ood": "aadarahi",
+          "word_hindi": "आदरही",
+          "subtype": "base_success",
+          "helpful_value": 6.125,
+          "helpful_minus_zs": 10.96875,
+          "helpful_top1_text": "आ",
+          "helpful_top1_script": "devanagari",
+          "helpful_target_minus_latin": 7.75
+        },
+        {
+          "word_ood": "aachhya",
+          "word_hindi": "आछ्या",
+          "subtype": "latin_collapse",
+          "helpful_value": 5.84375,
+          "helpful_minus_zs": 13.75,
+          "helpful_top1_text": "a",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -5.25
+        },
+        {
+          "word_ood": "aagyakarita",
+          "word_hindi": "आज्ञाकारिता",
+          "subtype": "base_success",
+          "helpful_value": 5.625,
+          "helpful_minus_zs": 12.5625,
+          "helpful_top1_text": "आ",
+          "helpful_top1_script": "devanagari",
+          "helpful_target_minus_latin": 6.375
+        },
+        {
+          "word_ood": "aagampriya",
+          "word_hindi": "आगमप्रिय",
+          "subtype": "base_success",
+          "helpful_value": 5.625,
+          "helpful_minus_zs": 11.0,
+          "helpful_top1_text": "आ",
+          "helpful_top1_script": "devanagari",
+          "helpful_target_minus_latin": 5.25
+        },
+        {
+          "word_ood": "aahalya",
+          "word_hindi": "आहल्या",
+          "subtype": "latin_collapse",
+          "helpful_value": 5.21875,
+          "helpful_minus_zs": 11.0,
+          "helpful_top1_text": "ah",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -1.375
+        }
+      ]
+    },
+    {
+      "channel": 2299,
+      "n_items": 30,
+      "zs_value": -9.327083333333333,
+      "helpful_value": -1.3294270833333333,
+      "zs_minus_helpful": -7.99765625,
+      "readout_grad_dot_column": -0.2330125110844771,
+      "readout_grad_column_cosine": -0.0754267754806972,
+      "first_order_predicted_effect": 1.8675140600132485,
+      "actual_singleton_patch_effect": 1.64375,
+      "predicted_actual_corr": 0.8932249860653444,
+      "latin_collapse_actual_effect": 1.7,
+      "corr_helpful_value_with_helpful_target_minus_latin": -0.6120084810626716,
+      "corr_helpful_value_with_latin_top1": 0.5092313779263987,
+      "subtype_rows": [
+        {
+          "subtype": "base_success",
+          "n_items": 14,
+          "mean_helpful_value": -1.8581194196428572,
+          "mean_helpful_minus_zs": 7.974469866071429
+        },
+        {
+          "subtype": "devanagari_wrong",
+          "n_items": 1,
+          "mean_helpful_value": -2.203125,
+          "mean_helpful_minus_zs": 10.234375
+        },
+        {
+          "subtype": "latin_collapse",
+          "n_items": 15,
+          "mean_helpful_value": -0.777734375,
+          "mean_helpful_minus_zs": 7.870182291666667
+        }
+      ],
+      "top_helpful_value_contexts": [
+        {
+          "word_ood": "aachhya",
+          "word_hindi": "आछ्या",
+          "subtype": "latin_collapse",
+          "helpful_value": -0.087890625,
+          "helpful_minus_zs": 7.693359375,
+          "helpful_top1_text": "a",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -5.25
+        },
+        {
+          "word_ood": "aabharit",
+          "word_hindi": "आभरित",
+          "subtype": "base_success",
+          "helpful_value": -0.1796875,
+          "helpful_minus_zs": 7.8828125,
+          "helpful_top1_text": "आ",
+          "helpful_top1_script": "devanagari",
+          "helpful_target_minus_latin": 7.875
+        },
+        {
+          "word_ood": "aaeeeesee",
+          "word_hindi": "आईईसी",
+          "subtype": "latin_collapse",
+          "helpful_value": -0.3984375,
+          "helpful_minus_zs": 6.4453125,
+          "helpful_top1_text": "a",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -8.75
+        },
+        {
+          "word_ood": "aaeko",
+          "word_hindi": "आएको",
+          "subtype": "latin_collapse",
+          "helpful_value": -0.408203125,
+          "helpful_minus_zs": 7.779296875,
+          "helpful_top1_text": "aa",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -4.75
+        },
+        {
+          "word_ood": "aadmio",
+          "word_hindi": "आदमियो",
+          "subtype": "latin_collapse",
+          "helpful_value": -0.439453125,
+          "helpful_minus_zs": 6.623046875,
+          "helpful_top1_text": "a",
+          "helpful_top1_script": "latin",
+          "helpful_target_minus_latin": -3.0
+        }
+      ]
+    }
+  ],
+  "claim": "Channels 5486 and 2299 are not assigned human-semantic labels. They are a small high-shot state/readout direction: helpful prompts move the coordinates upward relative to zero-shot, and because their down-projection columns have negative local dot product with the target-vs-Latin readout gradient, moving those coordinates back toward zero-shot increases the gold-first-token margin."
+}

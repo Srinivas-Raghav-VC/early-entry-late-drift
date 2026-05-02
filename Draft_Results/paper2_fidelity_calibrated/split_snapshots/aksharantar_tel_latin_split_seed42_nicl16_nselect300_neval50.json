@@ -1,0 +1,340 @@
+{
+  "pair": "aksharantar_tel_latin",
+  "source_language": "Telugu",
+  "input_script_name": "Latin",
+  "output_script_name": "Telugu",
+  "icl_examples": [
+    {
+      "english": "tel270354",
+      "hindi": "కిందపడిపోయిన",
+      "ood": "kindapadipoyina"
+    },
+    {
+      "english": "tel1833213",
+      "hindi": "కిక్షా",
+      "ood": "kiksha"
+    },
+    {
+      "english": "tel953249",
+      "hindi": "ఒయాచిర",
+      "ood": "oyachira"
+    },
+    {
+      "english": "tel2204554",
+      "hindi": "మార్చాను",
+      "ood": "maarchaanu"
+    },
+    {
+      "english": "tel1032628",
+      "hindi": "పసుపుటైల్",
+      "ood": "pasuputail"
+    },
+    {
+      "english": "tel650198",
+      "hindi": "రుణపడిపోయాం",
+      "ood": "runapadipoyam"
+    },
+    {
+      "english": "tel804774",
+      "hindi": "జిలానీలెందరు",
+      "ood": "jilaaneelendaru"
+    },
+    {
+      "english": "tel1067498",
+      "hindi": "కలుస్తున్నారట",
+      "ood": "kalustunnarata"
+    },
+    {
+      "english": "tel2213535",
+      "hindi": "లిఖించాలన్న",
+      "ood": "likhinchalanna"
+    },
+    {
+      "english": "tel57361",
+      "hindi": "అయిపోయిద్ది",
+      "ood": "aypoyiddi"
+    },
+    {
+      "english": "tel2048919",
+      "hindi": "కదులుతన్న",
+      "ood": "kadulutanna"
+    },
+    {
+      "english": "tel251856",
+      "hindi": "అస్పష్టతకూ",
+      "ood": "aspashtatakuu"
+    },
+    {
+      "english": "tel345520",
+      "hindi": "సహించకే",
+      "ood": "sahinchake"
+    },
+    {
+      "english": "tel444239",
+      "hindi": "కొడుకులనూ",
+      "ood": "kodukulanuu"
+    },
+    {
+      "english": "tel2244330",
+      "hindi": "చెయ్యనంతవరకూ",
+      "ood": "cheyyanantavarakuu"
+    },
+    {
+      "english": "tel1574707",
+      "hindi": "కుశ్వంత్",
+      "ood": "kushwant"
+    }
+  ],
+  "eval_rows": [
+    {
+      "english": "tel2146970",
+      "hindi": "సర్వేశ్వరరావులను",
+      "ood": "sarveshwararaolanu"
+    },
+    {
+      "english": "tel1275156",
+      "hindi": "కలెక్సికోల్",
+      "ood": "colexicol"
+    },
+    {
+      "english": "tel1271891",
+      "hindi": "విమర్శల్లోంచి",
+      "ood": "vimarsallonchi"
+    },
+    {
+      "english": "tel52888",
+      "hindi": "తుమకూరు",
+      "ood": "tumkur"
+    },
+    {
+      "english": "tel1496940",
+      "hindi": "ఆలోచించవలెను",
+      "ood": "aalochinchavalenu"
+    },
+    {
+      "english": "tel1355023",
+      "hindi": "వ్యాపించినదీ",
+      "ood": "vyaapinchinadii"
+    },
+    {
+      "english": "tel1362824",
+      "hindi": "మార్ఫిస్",
+      "ood": "marphis"
+    },
+    {
+      "english": "tel2165687",
+      "hindi": "సవరించడంలో",
+      "ood": "savarinchadamlo"
+    },
+    {
+      "english": "tel178703",
+      "hindi": "కణాంతర్గత",
+      "ood": "kanaantargata"
+    },
+    {
+      "english": "tel1841337",
+      "hindi": "కేశనాళికలకు",
+      "ood": "kesanaalikalaku"
+    },
+    {
+      "english": "tel1042584",
+      "hindi": "బొల్లోరిగూడెంలో",
+      "ood": "bollorigudemlo"
+    },
+    {
+      "english": "tel119353",
+      "hindi": "పట్టుకునేలాగానో",
+      "ood": "pattukunelagano"
+    },
+    {
+      "english": "tel246211",
+      "hindi": "జంతురక్షకులుగా",
+      "ood": "janturakshakulugaa"
+    },
+    {
+      "english": "tel362768",
+      "hindi": "వరదలకూ",
+      "ood": "varadalakuu"
+    },
+    {
+      "english": "tel1619819",
+      "hindi": "దేవదూతను",
+      "ood": "deevaduutanu"
+    },
+    {
+      "english": "tel949691",
+      "hindi": "డాక్యుమెంట్లలోని",
+      "ood": "daakyumentlaloni"
+    },
+    {
+      "english": "tel2105510",
+      "hindi": "నిర్జనప్రదేశం",
+      "ood": "nirjanapradesam"
+    },
+    {
+      "english": "tel312871",
+      "hindi": "నిర్మించుకుంటారట",
+      "ood": "nirminchukuntaarata"
+    },
+    {
+      "english": "tel1566143",
+      "hindi": "గాంధారాధీశుడు",
+      "ood": "gandharadhishudu"
+    },
+    {
+      "english": "tel2159267",
+      "hindi": "ఒత్తాను",
+      "ood": "ottaanu"
+    },
+    {
+      "english": "tel477583",
+      "hindi": "శ్వాసపరుస్తుంది",
+      "ood": "swaasaparustundi"
+    },
+    {
+      "english": "tel1859272",
+      "hindi": "కప్పుతున్నా",
+      "ood": "kapputunna"
+    },
+    {
+      "english": "tel700610",
+      "hindi": "తాళ్ళకు",
+      "ood": "taallaku"
+    },
+    {
+      "english": "tel2311732",
+      "hindi": "వేధించవు",
+      "ood": "vedhinchavu"
+    },
+    {
+      "english": "tel455764",
+      "hindi": "అభ్యర్థులపేర్లు",
+      "ood": "abhyardhulaperlu"
+    },
+    {
+      "english": "tel1219628",
+      "hindi": "తమిలో",
+      "ood": "tamilo"
+    },
+    {
+      "english": "tel828674",
+      "hindi": "చేసికుంటుండ్రు",
+      "ood": "chesikuntundru"
+    },
+    {
+      "english": "tel38704",
+      "hindi": "పొరపాటున",
+      "ood": "porapaatuna"
+    },
+    {
+      "english": "tel2295223",
+      "hindi": "అభిశస్తిం",
+      "ood": "abhishastim"
+    },
+    {
+      "english": "tel1639507",
+      "hindi": "సమీకరించాలన్నా",
+      "ood": "sameekarinchaalanna"
+    },
+    {
+      "english": "tel161954",
+      "hindi": "హోలగుండి",
+      "ood": "holagundi"
+    },
+    {
+      "english": "tel87788",
+      "hindi": "బ్లేకబ్రున్",
+      "ood": "blackburne"
+    },
+    {
+      "english": "tel53390",
+      "hindi": "ఊహించుకుంటే",
+      "ood": "oohinchukunte"
+    },
+    {
+      "english": "tel2129970",
+      "hindi": "ఏరులైపారే",
+      "ood": "yerulaipare"
+    },
+    {
+      "english": "tel807757",
+      "hindi": "మండలకేంద్రంలోనూ",
+      "ood": "mandalakendramlonu"
+    },
+    {
+      "english": "tel2089155",
+      "hindi": "కృష్ణాతీరాలను",
+      "ood": "krushnaateeraalanu"
+    },
+    {
+      "english": "tel212334",
+      "hindi": "ఇనెవెస్టర్లను",
+      "ood": "innevesterlanu"
+    },
+    {
+      "english": "tel1292883",
+      "hindi": "పెట్టుకున్నాకనే",
+      "ood": "pettukunnakane"
+    },
+    {
+      "english": "tel1527498",
+      "hindi": "తేనెల్ని",
+      "ood": "thenelni"
+    },
+    {
+      "english": "tel796170",
+      "hindi": "శ్రతువులు",
+      "ood": "shrathuvulu"
+    },
+    {
+      "english": "tel1689473",
+      "hindi": "కాఫ్రాది",
+      "ood": "kafradi"
+    },
+    {
+      "english": "tel1271976",
+      "hindi": "అంతరిం",
+      "ood": "antarim"
+    },
+    {
+      "english": "tel2286951",
+      "hindi": "రొద్దానికి",
+      "ood": "roddaaniki"
+    },
+    {
+      "english": "tel2068205",
+      "hindi": "నువ్వక్కడ",
+      "ood": "nuvvakkada"
+    },
+    {
+      "english": "tel1500480",
+      "hindi": "కృష్ణబాబుకు",
+      "ood": "krishnabaabuku"
+    },
+    {
+      "english": "tel2213823",
+      "hindi": "ఇద్దరక్కలూ",
+      "ood": "iddarakkaluu"
+    },
+    {
+      "english": "tel318765",
+      "hindi": "మోజాంగ్",
+      "ood": "mojang"
+    },
+    {
+      "english": "tel1818649",
+      "hindi": "క్రమబద్దీకరించింది",
+      "ood": "kramabaddeekarinchindi"
+    },
+    {
+      "english": "tel1129003",
+      "hindi": "వచ్చాడోచ్",
+      "ood": "vachadoch"
+    },
+    {
+      "english": "tel2302643",
+      "hindi": "కార్యకలాపానికి",
+      "ood": "kaaryakalaapaaniki"
+    }
+  ]
+}

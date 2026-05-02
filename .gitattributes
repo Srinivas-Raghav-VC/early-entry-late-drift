@@ -1,0 +1,26 @@
+# Keep anonymous review archives focused on paper, code, tests, compact data,
+# and reproduction instructions. These files remain tracked for development but
+# are omitted from `git archive` exports.
+AGENTS.md export-ignore
+CHANGELOG.md export-ignore
+INTERPRETABILITY_RESEARCH_SETUP.md export-ignore
+README_SETUP.md export-ignore
+SESSION_SETUP_REFERENCE.md export-ignore
+autoresearch.md export-ignore
+autoresearch.jsonl export-ignore
+research/ANSWER_EXPLAINER_CONTRACT.md export-ignore
+research/CODE_QUALITY_CONTRACT.md export-ignore
+research/EXAMPLES.md export-ignore
+research/FINAL_PLANNER_PROMPT.xml export-ignore
+research/MODEL_ROUTING.md export-ignore
+research/PAPER_AND_TOOL_POLICY.md export-ignore
+research/PHASE0A_RUNBOOK.md export-ignore
+research/PROJECT_BRIEF.md export-ignore
+research/RESEARCH_JOURNAL.md export-ignore
+research/RETROSPECTIVE.md export-ignore
+research/TASK_TEMPLATE.md export-ignore
+research/VERIFICATION_AND_DEGRADATION.md export-ignore
+research/VISUAL_DESIGN_REVIEW.md export-ignore
+research/spec.md export-ignore
+research/spec_journal.md export-ignore
+research/agents/** export-ignore

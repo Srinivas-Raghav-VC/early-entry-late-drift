@@ -1,0 +1,28 @@
+{
+  "name": "phase0a-problem-statement-verification-smoke-v2",
+  "seeds": [11],
+  "language_codes": ["hin", "tel", "ben", "tam", "mar"],
+  "n_values": [0, 4, 256],
+  "n_candidate": 300,
+  "n_eval": 50,
+  "max_new_tokens": 32,
+  "max_eval_rows": 5,
+  "batch_size": 16,
+  "prompt_templates": ["canonical"],
+  "icl_variants": ["helpful"],
+  "judge": {
+    "enabled": false,
+    "model": "gemini-2.0-flash-lite",
+    "probe_per_condition": 0
+  },
+  "paths": {
+    "snapshots_dir": "research/results/phase0_clean_modal/snapshots",
+    "output_dir": "research/results/phase0_clean_modal/verification_smoke_v2"
+  },
+  "aggregate_after_run": true,
+  "stats_after_run": true,
+  "plots_after_run": true,
+  "cross_seed_disjoint": true,
+  "baseline_prompt_template": "canonical",
+  "baseline_icl_variant": "helpful"
+}

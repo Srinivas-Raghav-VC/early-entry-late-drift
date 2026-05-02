@@ -1,0 +1,21 @@
+{
+  "name": "ai4bharat/Aksharantar[mar-en]",
+  "url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+  "license": "cc",
+  "version_date": "2023-08-31",
+  "row_count": 2000,
+  "build_note": "Materialized for Loop 2/3 language-expansion control verification.",
+  "source_report": {
+    "language_code": "mar",
+    "source_language": "Marathi",
+    "target_script": "Devanagari",
+    "zip_path": ".cache/aksharantar/mar.zip",
+    "counts": {
+      "raw_rows": 1472584,
+      "seen": 1472584,
+      "drop_short_source": 138,
+      "drop_ambiguous_source": 103804,
+      "usable_unique_rows": 1242205
+    }
+  }
+}

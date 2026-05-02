@@ -1,0 +1,118 @@
+# --- Local agent / workspace state ---
+.cache/
+.opencode/
+.pi/
+.ralph/
+.sisyphus/
+
+# --- Virtual environments ---
+.venv/
+.venv*/
+venv/
+
+# --- Python caches ---
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Local notebooks / session dumps / debug ---
+feynman-session-*.html
+*.nohup.log
+run_debug.py
+
+# --- Generated manuscript build artifacts ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# --- Generated research artifacts (keep source, not bulky outputs) ---
+outputs/
+notes/
+research/results/
+Draft_Results/results/
+Draft_Results/paper2_fidelity_calibrated/results/
+Draft_Results/rescue_research/results*/
+
+# --- Keep only the small public-facing Draft_Results compatibility layer ---
+Draft_Results/**
+!Draft_Results/
+!Draft_Results/README.md
+!Draft_Results/__init__.py
+!Draft_Results/config.py
+!Draft_Results/config_multiscript.py
+!Draft_Results/core.py
+!Draft_Results/data/
+!Draft_Results/data/transliteration/
+!Draft_Results/data/transliteration/aksharantar_ben_latin.jsonl
+!Draft_Results/data/transliteration/aksharantar_ben_latin.jsonl.meta.json
+!Draft_Results/data/transliteration/aksharantar_hin_latin.jsonl
+!Draft_Results/data/transliteration/aksharantar_hin_latin.jsonl.meta.json
+!Draft_Results/data/transliteration/aksharantar_mar_latin.jsonl
+!Draft_Results/data/transliteration/aksharantar_mar_latin.jsonl.meta.json
+!Draft_Results/data/transliteration/aksharantar_tam_latin.jsonl
+!Draft_Results/data/transliteration/aksharantar_tam_latin.jsonl.meta.json
+!Draft_Results/data/transliteration/aksharantar_tel_latin.jsonl
+!Draft_Results/data/transliteration/aksharantar_tel_latin.jsonl.meta.json
+!Draft_Results/paper2_fidelity_calibrated/
+!Draft_Results/paper2_fidelity_calibrated/__init__.py
+!Draft_Results/paper2_fidelity_calibrated/eval_utils.py
+!Draft_Results/paper2_fidelity_calibrated/joint_selection.py
+!Draft_Results/paper2_fidelity_calibrated/phase1_common.py
+!Draft_Results/paper2_fidelity_calibrated/phase23_common.py
+!Draft_Results/paper2_fidelity_calibrated/protocol_utils.py
+!Draft_Results/paper2_fidelity_calibrated/run.py
+!Draft_Results/paper2_fidelity_calibrated/run_neutral_filler_recency_controls.py
+!Draft_Results/paper2_fidelity_calibrated/run_phase0_token_visibility.py
+!Draft_Results/paper2_fidelity_calibrated/run_script_space_map.py
+!Draft_Results/paper2_fidelity_calibrated/split_snapshots/
+!Draft_Results/paper2_fidelity_calibrated/split_snapshots/aksharantar_hin_latin_split_seed42_nicl16_nselect300_neval50.json
+!Draft_Results/paper2_fidelity_calibrated/split_snapshots/aksharantar_tel_latin_split_seed42_nicl16_nselect300_neval50.json
+!Draft_Results/rescue_research/
+!Draft_Results/rescue_research/__init__.py
+!Draft_Results/rescue_research/analysis/
+!Draft_Results/rescue_research/analysis/__init__.py
+!Draft_Results/rescue_research/analysis/metrics.py
+!Draft_Results/rescue_research/analysis/stats.py
+!Draft_Results/rescue_research/configs/
+!Draft_Results/rescue_research/configs/pair_registry.json
+!Draft_Results/rescue_research/data_pipeline/
+!Draft_Results/rescue_research/data_pipeline/__init__.py
+!Draft_Results/rescue_research/data_pipeline/ingest.py
+!Draft_Results/rescue_research/data_pipeline/loaders.py
+!Draft_Results/rescue_research/data_pipeline/manifest.py
+!Draft_Results/rescue_research/prompts/
+!Draft_Results/rescue_research/prompts/__init__.py
+!Draft_Results/rescue_research/prompts/render.py
+!Draft_Results/rescue_research/prompts/templates.py
+
+# --- Local paper / presentation trees ---
+Paper Template and Paper/
+
+# --- Local tool configs / scratch helpers ---
+opencode/
+opencode.json
+autoresearch.jsonl
+api.txt
+**/api.txt
+plan.md
+fix_*.py
+generate_clean_excalidraw.py
+
+# --- Large local data caches ---
+*.tar.gz
+
+# --- OS/editor noise ---
+.DS_Store
+Thumbs.db

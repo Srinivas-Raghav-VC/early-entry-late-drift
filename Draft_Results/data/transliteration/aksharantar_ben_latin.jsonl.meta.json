@@ -1,0 +1,23 @@
+{
+  "name": "ai4bharat/Aksharantar[ben-en]",
+  "url": "https://huggingface.co/datasets/ai4bharat/Aksharantar",
+  "license": "cc",
+  "version_date": "2023-08-31",
+  "row_count": 2000,
+  "build_note": "Materialized for Loop 2/3 language-expansion control verification.",
+  "source_report": {
+    "language_code": "ben",
+    "source_language": "Bengali",
+    "target_script": "Bengali",
+    "zip_path": ".cache/aksharantar/ben.zip",
+    "counts": {
+      "raw_rows": 1256871,
+      "seen": 1256871,
+      "drop_empty": 1,
+      "drop_short_source": 186,
+      "drop_script_mismatch": 1,
+      "drop_ambiguous_source": 103553,
+      "usable_unique_rows": 1010729
+    }
+  }
+}

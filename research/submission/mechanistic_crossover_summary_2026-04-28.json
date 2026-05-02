@@ -1,0 +1,398 @@
+{
+  "claim_status": "bounded crossover evidence",
+  "cells": [
+    {
+      "language": "Hindi",
+      "failure_stage": "early target entry",
+      "edit_family": "fixed sparse MLP-channel shift",
+      "artifact": "research/results/autoresearch/hindi_practical_patch_eval_review200_v1/1b/aksharantar_hin_latin/seed42/nicl64/hindi_1b_practical_patch_eval.json",
+      "status": "works",
+      "n_items": 200,
+      "baseline_primary": 0.8267261904761906,
+      "patched_primary": 0.7029285714285715,
+      "primary_metric": "full akshara CER (lower better)",
+      "delta": 0.12379761904761905,
+      "delta_ci_text": "+0.124 [+0.087,+0.163]",
+      "note": "Held-out fixed two-channel shift improves full-word CER and first-entry metrics; sign flip harms in the source artifact."
+    },
+    {
+      "language": "Telugu",
+      "failure_stage": "late continuation",
+      "edit_family": "shared-prefix full-residual mean shift",
+      "artifact": "research/results/autoresearch/telugu_continuation_practical_patch_eval_review200_v1/1b/aksharantar_tel_latin/seed42/nicl64/telugu_continuation_practical_patch_eval.json",
+      "status": "no rescue",
+      "n_items": 191,
+      "baseline_primary": 1.07381575666916,
+      "patched_primary": 1.0764335577162802,
+      "primary_metric": "continuation akshara CER (lower better)",
+      "delta": -0.002617801047120419,
+      "delta_ci_text": "-0.003 [-0.008,+0.000]",
+      "note": "Oracle-conditioned static residual shift does not improve continuation generation under this tested edit family."
+    },
+    {
+      "language": "Telugu",
+      "failure_stage": "late continuation",
+      "edit_family": "fixed sparse MLP-channel shift",
+      "artifact": "research/results/autoresearch/telugu_mlp_channel_crossover_v1/1b/aksharantar_tel_latin/seed42/nicl64/telugu_1b_mlp_channel_crossover.json",
+      "status": "no rescue",
+      "n_items": 191,
+      "baseline_primary": 1.0770443779606085,
+      "patched_primary": 1.0796621790077288,
+      "primary_metric": "continuation akshara CER (lower better)",
+      "delta": -0.002617801047120419,
+      "delta_ci_text": "-0.003 [-0.008,+0.000]",
+      "selected": {
+        "selector_kind": "top_abs_mean_delta_then_select_alpha_and_k_on_gap",
+        "k": 2,
+        "alpha": 0.25,
+        "channels": [
+          5631,
+          6014
+        ],
+        "selection_row": {
+          "selector_kind": "top_abs_mean_delta",
+          "k": 2,
+          "alpha": 0.25,
+          "channels": [
+            5631,
+            6014
+          ],
+          "n_items": 94,
+          "n_skipped": 6,
+          "delta_mean_gap": 0.0017869015957446808,
+          "delta_mean_gold_next_prob": -0.0015277840237054514,
+          "delta_mean_competitor_next_prob": 0.0001079484060217536,
+          "patched_gold_top1_rate": 0.23404255319148937,
+          "patched_competitor_top1_rate": 0.2765957446808511
+        }
+      },
+      "random_aggregate": {
+        "intervention": "random_channel_shift_avg",
+        "n_random": 3,
+        "full_exact_match_mean": 0.005235602094240839,
+        "full_akshara_cer_mean": 0.5699638494141112,
+        "continuation_exact_match_mean": 0.005235602094240839,
+        "continuation_akshara_cer_mean": 1.0764626443945817,
+        "bank_copy_rate_mean": 0.15706806282722513,
+        "delta_continuation_cer_improvement_mean": 0.0005817335660267596,
+        "delta_first_divergence_gap_mean": -0.005644633507853404,
+        "per_random_summary_rows": [
+          {
+            "intervention": "random_channel_shift_1",
+            "n_items": 191,
+            "full_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "full_akshara_cer": {
+              "mean": 0.5703128895537273,
+              "ci_low": 0.5319182144934763,
+              "ci_high": 0.6092589129892795,
+              "n": 191
+            },
+            "continuation_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "continuation_akshara_cer": {
+              "mean": 1.0770443779606085,
+              "ci_low": 1.0075397344801795,
+              "ci_high": 1.1523155073547744,
+              "n": 191
+            },
+            "bank_copy_rate": {
+              "mean": 0.15706806282722513,
+              "ci_low": 0.10471204188481675,
+              "ci_high": 0.2094240837696335,
+              "n": 191
+            },
+            "first_divergence_gap": {
+              "mean": -1.5372218586387434,
+              "ci_low": -2.5625368128272252,
+              "ci_high": -0.4966050392670175,
+              "n": 191
+            },
+            "first_divergence_gold_top1_rate": {
+              "mean": 0.20418848167539266,
+              "ci_low": 0.14659685863874344,
+              "ci_high": 0.2617801047120419,
+              "n": 191
+            },
+            "first_divergence_competitor_top1_rate": {
+              "mean": 0.35602094240837695,
+              "ci_low": 0.2879581151832461,
+              "ci_high": 0.42408376963350786,
+              "n": 191
+            },
+            "delta_full_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_full_cer_improvement": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_continuation_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_continuation_cer_improvement": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_bank_copy_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_gap": {
+              "mean": 0.0032722513089005235,
+              "ci_low": -0.018160994764397906,
+              "ci_high": 0.02421874999999994,
+              "n": 191
+            },
+            "delta_first_divergence_gold_top1_rate": {
+              "mean": -0.005235602094240838,
+              "ci_low": -0.015706806282722512,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_competitor_top1_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "rescue_rate_on_base_bank_copy": 0.0,
+            "harm_rate_on_base_full_exact": 0.0,
+            "rescue_rate_on_base_competitor_top1": 0.0,
+            "harm_rate_on_base_gold_top1": 0.025
+          },
+          {
+            "intervention": "random_channel_shift_2",
+            "n_items": 191,
+            "full_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "full_akshara_cer": {
+              "mean": 0.5703128895537273,
+              "ci_low": 0.5329514667996342,
+              "ci_high": 0.6090613832793152,
+              "n": 191
+            },
+            "continuation_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "continuation_akshara_cer": {
+              "mean": 1.0770443779606085,
+              "ci_low": 1.0094663113936675,
+              "ci_high": 1.151736163051608,
+              "n": 191
+            },
+            "bank_copy_rate": {
+              "mean": 0.15706806282722513,
+              "ci_low": 0.1099476439790576,
+              "ci_high": 0.2094240837696335,
+              "n": 191
+            },
+            "first_divergence_gap": {
+              "mean": -1.5303501308900525,
+              "ci_low": -2.541508507853403,
+              "ci_high": -0.48538939790575986,
+              "n": 191
+            },
+            "first_divergence_gold_top1_rate": {
+              "mean": 0.2094240837696335,
+              "ci_low": 0.1518324607329843,
+              "ci_high": 0.2670157068062827,
+              "n": 191
+            },
+            "first_divergence_competitor_top1_rate": {
+              "mean": 0.35602094240837695,
+              "ci_low": 0.2879581151832461,
+              "ci_high": 0.42408376963350786,
+              "n": 191
+            },
+            "delta_full_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_full_cer_improvement": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_continuation_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_continuation_cer_improvement": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_bank_copy_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_gap": {
+              "mean": 0.010143979057591623,
+              "ci_low": -0.007203043193717276,
+              "ci_high": 0.027977748691099476,
+              "n": 191
+            },
+            "delta_first_divergence_gold_top1_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_competitor_top1_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "rescue_rate_on_base_bank_copy": 0.0,
+            "harm_rate_on_base_full_exact": 0.0,
+            "rescue_rate_on_base_competitor_top1": 0.0,
+            "harm_rate_on_base_gold_top1": 0.0
+          },
+          {
+            "intervention": "random_channel_shift_3",
+            "n_items": 191,
+            "full_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "full_akshara_cer": {
+              "mean": 0.5692657691348791,
+              "ci_low": 0.5316627191888972,
+              "ci_high": 0.6088469729078368,
+              "n": 191
+            },
+            "continuation_exact_match": {
+              "mean": 0.005235602094240838,
+              "ci_low": 0.0,
+              "ci_high": 0.015706806282722512,
+              "n": 191
+            },
+            "continuation_akshara_cer": {
+              "mean": 1.075299177262528,
+              "ci_low": 1.0092896098229869,
+              "ci_high": 1.1528775554724506,
+              "n": 191
+            },
+            "bank_copy_rate": {
+              "mean": 0.15706806282722513,
+              "ci_low": 0.10471204188481675,
+              "ci_high": 0.2094240837696335,
+              "n": 191
+            },
+            "first_divergence_gap": {
+              "mean": -1.5708442408376964,
+              "ci_low": -2.6246625490837694,
+              "ci_high": -0.49775850785340364,
+              "n": 191
+            },
+            "first_divergence_gold_top1_rate": {
+              "mean": 0.2094240837696335,
+              "ci_low": 0.15706806282722513,
+              "ci_high": 0.2670157068062827,
+              "n": 191
+            },
+            "first_divergence_competitor_top1_rate": {
+              "mean": 0.35602094240837695,
+              "ci_low": 0.2879581151832461,
+              "ci_high": 0.42408376963350786,
+              "n": 191
+            },
+            "delta_full_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_full_cer_improvement": {
+              "mean": 0.0010471204188481679,
+              "ci_low": 0.0,
+              "ci_high": 0.0031413612565445036,
+              "n": 191
+            },
+            "delta_continuation_exact_match": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_continuation_cer_improvement": {
+              "mean": 0.0017452006980802788,
+              "ci_low": 0.0,
+              "ci_high": 0.005235602094240836,
+              "n": 191
+            },
+            "delta_bank_copy_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_gap": {
+              "mean": -0.030350130890052358,
+              "ci_low": -0.051047120418848166,
+              "ci_high": -0.01006217277486911,
+              "n": 191
+            },
+            "delta_first_divergence_gold_top1_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "delta_first_divergence_competitor_top1_rate": {
+              "mean": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 0.0,
+              "n": 191
+            },
+            "rescue_rate_on_base_bank_copy": 0.0,
+            "harm_rate_on_base_full_exact": 0.0,
+            "rescue_rate_on_base_competitor_top1": 0.0,
+            "harm_rate_on_base_gold_top1": 0.0
+          }
+        ]
+      },
+      "note": "The selected Hindi-style compact channel shift does not rescue Telugu continuation; the selected split gain was near zero and held-out continuation CER slightly worsened."
+    }
+  ],
+  "interpretation": "The crossover matrix is meant to reduce the apples-to-oranges objection. It does not prove a universal early-vs-late law; it records which edit families rescue or fail under held-out evaluation."
+}
