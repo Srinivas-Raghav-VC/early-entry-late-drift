@@ -41,11 +41,29 @@ FIGURE_FILES = [
     "fig_hindi_practical_patch_tikz_v18.tex",
 ]
 
+CODE_URL = "https://anonymous.4open.science/r/early-entry-late-drift-7EBB/README.md"
+CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
+\url{{{CODE_URL}}}.
+The repository contains experiment scripts, retained result artifacts, paper source,
+and deterministic reproduction checks; full raw GPU reruns require gated model
+access and A100-class compute."""
+
+
+def add_code_link(text: str) -> str:
+    """Insert the anonymous code link once, preserving a hand-edited source if present."""
+    if CODE_URL in text:
+        return text
+    marker = "\\end{enumerate}\n\n\\begin{figure*}[t]"
+    if marker not in text:
+        raise ValueError("Could not find contribution-list marker for code-link insertion.")
+    return text.replace(marker, f"\\end{{enumerate}}\n\n{CODE_PARAGRAPH}\n\n\\begin{{figure*}}[t]", 1)
+
 
 def copy_public_sources() -> None:
     PUBLIC_TEX_DIR.mkdir(parents=True, exist_ok=True)
     PUBLIC_FIG_DIR.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(LEGACY_TEX, PUBLIC_TEX)
+    source = LEGACY_TEX.read_text(encoding="utf-8")
+    PUBLIC_TEX.write_text(add_code_link(source), encoding="utf-8")
     for name in STYLE_FILES:
         shutil.copy2(SOURCE_DIR / "icml2026" / name, PUBLIC_TEX_DIR / name)
     for name in FIGURE_FILES:

@@ -40,6 +40,13 @@ FIGURE_FILES = [
     "fig_hindi_practical_patch_tikz_v18.tex",
 ]
 
+CODE_URL = "https://anonymous.4open.science/r/early-entry-late-drift-7EBB/README.md"
+CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
+\url{{{CODE_URL}}}.
+The repository contains experiment scripts, retained result artifacts, paper source,
+and deterministic reproduction checks; full raw GPU reruns require gated model
+access and A100-class compute."""
+
 ABSTRACT_MAIN = r"""In-context learning (ICL) failures are often reported as a single accuracy drop, but Latin-to-Indic transliteration makes two failure stages visible: early target-entry failure and late prompt-bank continuation drift. We operationalize this split with first-akshara accuracy, continuation-tail CER, bank-copy diagnostics, and activation patching across five languages, then ask whether different stages expose different internal-state edit affordances. In \texttt{1B} Hindi, high-shot prompts often lose the first target token to Latin/source-like competitors; prompt-final patching identifies the strongest tested rescue at an \texttt{L25} MLP state, and a fixed two-channel shift gives a held-out rescue. In Telugu, a deliberately favorable shared-prefix oracle diagnostic identifies high-layer residual sites, yet the tested full-state mean-shift and Hindi-style compact-channel edits do not rescue continuation. Together, these results give a regime map plus one compact editable early-stage handle and one informative negative continuation-stage case; the Hindi edit reduces held-out CER from \textbf{0.827 to 0.703} ($n{=}200$), but we do not claim matched interventions or complete circuits."""
 
 ABSTRACT_COMPLEARN = r"""Compositional in-context learning (ICL) should build query-specific outputs from reusable exemplars, but aggregate accuracy hides where construction fails. Latin-to-Indic transliteration makes two stages visible: early target-entry failure and late prompt-bank continuation drift. We measure this split with first-akshara accuracy, continuation-tail CER, bank-copy diagnostics, and activation patching across five languages. In \texttt{1B} Hindi, high-shot prompts often lose the first target token to Latin/source-like competitors; prompt-final patching identifies the strongest tested rescue at an \texttt{L25} MLP state, and a fixed two-channel shift reduces held-out CER from \textbf{0.827 to 0.703} ($n{=}200$). In Telugu, a deliberately favorable shared-prefix oracle diagnostic identifies high-layer residual sites, yet the tested full-state mean-shift and Hindi-style compact-channel edits do not rescue continuation. The result is a stage-resolved account of compositional transliteration ICL: one compact editable early-stage handle, one informative negative continuation-stage case, and no claim of matched interventions or complete circuits."""
@@ -71,12 +78,22 @@ REPLACEMENTS = {
 }
 
 
+def add_code_link(text: str) -> str:
+    """Insert the anonymous code link once, preserving a hand-edited source if present."""
+    if CODE_URL in text:
+        return text
+    marker = "\\end{enumerate}\n\n\\begin{figure*}[t]"
+    if marker not in text:
+        raise ValueError("Could not find contribution-list marker for code-link insertion.")
+    return text.replace(marker, f"\\end{{enumerate}}\n\n{CODE_PARAGRAPH}\n\n\\begin{{figure*}}[t]", 1)
+
+
 def transform_for_complearn(text: str) -> str:
     for old, new in REPLACEMENTS.items():
         if old not in text:
             raise ValueError(f"Expected source text not found for replacement: {old[:120]!r}")
         text = text.replace(old, new, 1)
-    return text
+    return add_code_link(text)
 
 
 def copy_public_sources() -> None:
