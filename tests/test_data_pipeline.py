@@ -7,11 +7,11 @@ from research.modules.eval.verification_packet import (
 
 
 HIN_SNAPSHOT = Path(
-    "Draft_Results/paper2_fidelity_calibrated/split_snapshots/"
+    "lib/paper2_fidelity_calibrated/split_snapshots/"
     "aksharantar_hin_latin_split_seed42_nicl16_nselect300_neval50.json"
 )
 TEL_SNAPSHOT = Path(
-    "Draft_Results/paper2_fidelity_calibrated/split_snapshots/"
+    "lib/paper2_fidelity_calibrated/split_snapshots/"
     "aksharantar_tel_latin_split_seed42_nicl16_nselect300_neval50.json"
 )
 

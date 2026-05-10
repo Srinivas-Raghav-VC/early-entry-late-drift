@@ -1,6 +1,6 @@
 {
-  "value_artifact": "research/results/autoresearch/hindi_channel_value_audit_v1/1b/aksharantar_hin_latin/nicl64/hindi_1b_channel_value_audit.json",
-  "geometry_artifact": "research/results/autoresearch/hindi_channel_readout_geometry_v1/1b/aksharantar_hin_latin/seed42/nicl64/hindi_1b_channel_readout_geometry_audit.json",
+  "value_artifact": "research/results/hindi_channel_value_audit_v1/1b/aksharantar_hin_latin/nicl64/hindi_1b_channel_value_audit.json",
+  "geometry_artifact": "research/results/hindi_channel_readout_geometry_v1/1b/aksharantar_hin_latin/seed42/nicl64/hindi_1b_channel_readout_geometry_audit.json",
   "interpretation_status": "supported but bounded",
   "summary_rows": [
     {

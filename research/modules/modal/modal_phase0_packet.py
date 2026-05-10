@@ -23,9 +23,9 @@ N_VALUES = [0, 4, 8, 16, 32, 48, 64, 96, 128, 192, 256]
 
 FROZEN_SNAPSHOTS = {
     "Hindi": PROJECT_ROOT
-    / "Draft_Results/paper2_fidelity_calibrated/split_snapshots/aksharantar_hin_latin_split_seed42_nicl16_nselect300_neval50.json",
+    / "lib/paper2_fidelity_calibrated/split_snapshots/aksharantar_hin_latin_split_seed42_nicl16_nselect300_neval50.json",
     "Telugu": PROJECT_ROOT
-    / "Draft_Results/paper2_fidelity_calibrated/split_snapshots/aksharantar_tel_latin_split_seed42_nicl16_nselect300_neval50.json",
+    / "lib/paper2_fidelity_calibrated/split_snapshots/aksharantar_tel_latin_split_seed42_nicl16_nselect300_neval50.json",
 }
 
 LANGUAGE_CODE_TO_NAME = {
@@ -140,7 +140,7 @@ image = (
         }
     )
     .add_local_dir(PROJECT_ROOT / "research", remote_path="/repo/research")
-    .add_local_dir(PROJECT_ROOT / "Draft_Results", remote_path="/repo/Draft_Results")
+    .add_local_dir(PROJECT_ROOT / "lib", remote_path="/repo/lib")
 )
 
 
