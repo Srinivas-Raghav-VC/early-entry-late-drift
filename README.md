@@ -1,6 +1,6 @@
 # Early Entry, Late Drift: Stage-Specific Failure and Intervention in Multilingual Transliteration ICL
 
-Research code for the paper **"Early Entry, Late Drift: Stage-Specific Failure and Intervention in Multilingual Transliteration ICL"** (ICML 2026 Workshop on Compositional Learning).
+Research code for the paper **"Early Entry, Late Drift: Stage-Specific Failure and Intervention in Multilingual Transliteration ICL"** 
 
 ## Paper
 
