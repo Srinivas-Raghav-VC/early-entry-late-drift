@@ -123,6 +123,6 @@ Transliteration data (Aksharantar pairs) is included under `lib/data/translitera
 
 Seven JSON result files from the main causal experiments are included under `research/results/`. These are sufficient to verify the paper's headline CER values without re-running the GPU experiments.
 
-## Anonymity
+## Acknowledgements
 
-This repository is prepared for double-blind review. Do not add an identifying GitHub URL, username, or institution to any submitted artifact. Use an anonymous mirror (e.g., anonymous.4open.science) if a code link is required in the submission.
+Codebase refactoring and organization assisted by [Claude](https://claude.ai) (Anthropic).
