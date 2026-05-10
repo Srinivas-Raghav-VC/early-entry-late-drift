@@ -41,11 +41,39 @@ FIGURE_FILES = [
 ]
 
 CODE_URL = "https://anonymous.4open.science/r/early-entry-late-drift-7EBB/README.md"
-CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
+CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous code and reproducibility materials are
+available via the clickable \href{{{CODE_URL}}}{{\texttt{{anonymous repository}}}}. The repository
+contains experiment scripts, retained result artifacts, paper source, and
+deterministic reproduction checks; full raw GPU reruns require gated model access
+and A100-class compute."""
+
+OLD_CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
 \url{{{CODE_URL}}}.
 The repository contains experiment scripts, retained result artifacts, paper source,
 and deterministic reproduction checks; full raw GPU reruns require gated model
 access and A100-class compute."""
+
+CUSTOM_SPACING_BLOCK = r"""% Tighten float and display spacing so the dense workshop paper does not
+% strand large blank bands around figures, tables, and short equations.
+\AtBeginDocument{%
+  \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\floatsep}{7pt plus 2pt minus 2pt}%
+  \setlength{\intextsep}{7pt plus 2pt minus 2pt}%
+  \setlength{\abovecaptionskip}{4pt plus 1pt minus 1pt}%
+  \setlength{\belowcaptionskip}{3pt plus 1pt minus 1pt}%
+  \setlength{\abovedisplayskip}{5pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{5pt plus 2pt minus 2pt}%
+  \setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}%
+  \setlength{\belowdisplayshortskip}{4pt plus 1pt minus 1pt}%
+}
+
+"""
+
+APPENDIX_SPACING_BLOCK = r"""\onecolumn
+\setlength{\intextsep}{5pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt plus 1pt minus 1pt}
+\setlength{\belowcaptionskip}{3pt plus 1pt minus 1pt}
+"""
 
 ABSTRACT_MAIN = r"""In-context learning (ICL) failures are often reported as a single accuracy drop, but Latin-to-Indic transliteration makes two failure stages visible: early target-entry failure and late prompt-bank continuation drift. We operationalize this split with first-akshara accuracy, continuation-tail CER, bank-copy diagnostics, and activation patching across five languages, then ask whether different stages expose different internal-state edit affordances. In \texttt{1B} Hindi, high-shot prompts often lose the first target token to Latin/source-like competitors; prompt-final patching identifies the strongest tested rescue at an \texttt{L25} MLP state, and a fixed two-channel shift gives a held-out rescue. In Telugu, a deliberately favorable shared-prefix oracle diagnostic identifies high-layer residual sites, yet the tested full-state mean-shift and Hindi-style compact-channel edits do not rescue continuation. Together, these results give a regime map plus one compact editable early-stage handle and one informative negative continuation-stage case; the Hindi edit reduces held-out CER from \textbf{0.827 to 0.703} ($n{=}200$), but we do not claim matched interventions or complete circuits."""
 
@@ -78,8 +106,23 @@ REPLACEMENTS = {
 }
 
 
+def make_template_strict(text: str) -> str:
+    """Remove spacing hacks and keep the appendix in the ICML two-column format."""
+    text = text.replace(CUSTOM_SPACING_BLOCK, "")
+    text = text.replace(APPENDIX_SPACING_BLOCK, "")
+    text = text.replace("\n\\enlargethispage{6\\baselineskip}\n", "\n")
+    if "\\appendix" in text:
+        head, appendix = text.split("\\appendix", 1)
+        appendix = appendix.replace("\\begin{table}[H]", "\\begin{table*}[t]")
+        appendix = appendix.replace("\\end{table}", "\\end{table*}")
+        text = head + "\\appendix" + appendix
+    return text
+
+
 def add_code_link(text: str) -> str:
-    """Insert the anonymous code link once, preserving a hand-edited source if present."""
+    """Insert the anonymous code link once, using compact clickable text."""
+    if OLD_CODE_PARAGRAPH in text:
+        return text.replace(OLD_CODE_PARAGRAPH, CODE_PARAGRAPH, 1)
     if CODE_URL in text:
         return text
     marker = "\\end{enumerate}\n\n\\begin{figure*}[t]"
@@ -89,6 +132,7 @@ def add_code_link(text: str) -> str:
 
 
 def transform_for_complearn(text: str) -> str:
+    text = make_template_strict(text)
     for old, new in REPLACEMENTS.items():
         if old not in text:
             raise ValueError(f"Expected source text not found for replacement: {old[:120]!r}")

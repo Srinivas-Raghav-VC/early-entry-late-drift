@@ -42,15 +42,58 @@ FIGURE_FILES = [
 ]
 
 CODE_URL = "https://anonymous.4open.science/r/early-entry-late-drift-7EBB/README.md"
-CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
+CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous code and reproducibility materials are
+available via the clickable \href{{{CODE_URL}}}{{\texttt{{anonymous repository}}}}. The repository
+contains experiment scripts, retained result artifacts, paper source, and
+deterministic reproduction checks; full raw GPU reruns require gated model access
+and A100-class compute."""
+
+OLD_CODE_PARAGRAPH = rf"""\paragraph{{Code.}} Anonymous reproducibility materials are available at
 \url{{{CODE_URL}}}.
 The repository contains experiment scripts, retained result artifacts, paper source,
 and deterministic reproduction checks; full raw GPU reruns require gated model
 access and A100-class compute."""
 
+CUSTOM_SPACING_BLOCK = r"""% Tighten float and display spacing so the dense workshop paper does not
+% strand large blank bands around figures, tables, and short equations.
+\AtBeginDocument{%
+  \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}%
+  \setlength{\floatsep}{7pt plus 2pt minus 2pt}%
+  \setlength{\intextsep}{7pt plus 2pt minus 2pt}%
+  \setlength{\abovecaptionskip}{4pt plus 1pt minus 1pt}%
+  \setlength{\belowcaptionskip}{3pt plus 1pt minus 1pt}%
+  \setlength{\abovedisplayskip}{5pt plus 2pt minus 2pt}%
+  \setlength{\belowdisplayskip}{5pt plus 2pt minus 2pt}%
+  \setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}%
+  \setlength{\belowdisplayshortskip}{4pt plus 1pt minus 1pt}%
+}
+
+"""
+
+APPENDIX_SPACING_BLOCK = r"""\onecolumn
+\setlength{\intextsep}{5pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt plus 1pt minus 1pt}
+\setlength{\belowcaptionskip}{3pt plus 1pt minus 1pt}
+"""
+
+
+def make_template_strict(text: str) -> str:
+    """Remove spacing hacks and keep the appendix in the ICML two-column format."""
+    text = text.replace(CUSTOM_SPACING_BLOCK, "")
+    text = text.replace(APPENDIX_SPACING_BLOCK, "")
+    text = text.replace("\n\\enlargethispage{6\\baselineskip}\n", "\n")
+    if "\\appendix" in text:
+        head, appendix = text.split("\\appendix", 1)
+        appendix = appendix.replace("\\begin{table}[H]", "\\begin{table*}[t]")
+        appendix = appendix.replace("\\end{table}", "\\end{table*}")
+        text = head + "\\appendix" + appendix
+    return text
+
 
 def add_code_link(text: str) -> str:
-    """Insert the anonymous code link once, preserving a hand-edited source if present."""
+    """Insert the anonymous code link once, using compact clickable text."""
+    if OLD_CODE_PARAGRAPH in text:
+        return text.replace(OLD_CODE_PARAGRAPH, CODE_PARAGRAPH, 1)
     if CODE_URL in text:
         return text
     marker = "\\end{enumerate}\n\n\\begin{figure*}[t]"
@@ -63,7 +106,7 @@ def copy_public_sources() -> None:
     PUBLIC_TEX_DIR.mkdir(parents=True, exist_ok=True)
     PUBLIC_FIG_DIR.mkdir(parents=True, exist_ok=True)
     source = LEGACY_TEX.read_text(encoding="utf-8")
-    PUBLIC_TEX.write_text(add_code_link(source), encoding="utf-8")
+    PUBLIC_TEX.write_text(add_code_link(make_template_strict(source)), encoding="utf-8")
     for name in STYLE_FILES:
         shutil.copy2(SOURCE_DIR / "icml2026" / name, PUBLIC_TEX_DIR / name)
     for name in FIGURE_FILES:
